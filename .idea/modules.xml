@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../fizzbuzz/FizzBuzz.iml" filepath="$PROJECT_DIR$/../fizzbuzz/FizzBuzz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flyingcar/FlyingCar.iml" filepath="$PROJECT_DIR$/../flyingcar/FlyingCar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../shapes/Shapes.iml" filepath="$PROJECT_DIR$/../shapes/Shapes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calculator.iml" filepath="$PROJECT_DIR$/calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../enhanced_drawing_tools/enhanced_drawing_tools.iml" filepath="$PROJECT_DIR$/../enhanced_drawing_tools/enhanced_drawing_tools.iml" />
+    </modules>
+  </component>
+</project>
