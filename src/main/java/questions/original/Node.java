@@ -1,4 +1,4 @@
-package questions;
+package questions.original;
 
 public class Node {
     String operator;
