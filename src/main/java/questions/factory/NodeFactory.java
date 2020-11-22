@@ -14,7 +14,7 @@ public class NodeFactory {
         } else if ("*".equals(operator)) {
             node = new MultiplyNode(value);
         } else if ("-".equals(operator)) {
-            node = new SubstractNode(value);
+            node = new SubtractNode(value);
         } else {
             node = new NumberNode(value);
         }

@@ -2,6 +2,10 @@ package questions.nodes;
 
 /**
  * Created by sayantjm on 22/11/20
+ * Abstract class created for replacing the original Node
+ * The method calculate will be overwrited by the concret classes
+ * specifying how the calculation must be done.
+ *
  */
 abstract public class RNode {
     String operator;

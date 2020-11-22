@@ -14,7 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="calculator" target="1.5" />
+      <module name="calculator" target="8" />
       <module name="enhanced_drawing_tools" target="8" />
       <module name="FizzBuzz" target="8" />
       <module name="FlyingCar" target="8" />

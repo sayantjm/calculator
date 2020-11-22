@@ -4,7 +4,7 @@ import questions.factory.NodeFactory;
 import questions.factory.NodeStore;
 import questions.nodes.RNode;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by sayantjm on 22/11/20
@@ -19,6 +19,9 @@ public class CalculatorFactoryTest {
         nodeStore = new NodeStore(factory);
     }
 
+    /**
+     * Scenenario: Testing the product operator
+     */
     @Test
     public void multiplyTest() {
         RNode times = nodeStore.createNode("*",0);
@@ -31,6 +34,9 @@ public class CalculatorFactoryTest {
         assertEquals(12, times.calculate());
     }
 
+    /**
+     * Scenenario: Testing the sum operator
+     */
     @Test
     public void sumTest() {
         RNode times = nodeStore.createNode("+",0);
@@ -43,6 +49,9 @@ public class CalculatorFactoryTest {
         assertEquals(7, times.calculate());
     }
 
+    /**
+     * Scenenario: testing multiple operations, sum and product
+     */
     @Test
     public void multipleOperationsTest() {
         //5 + 10 * 7
@@ -64,6 +73,9 @@ public class CalculatorFactoryTest {
         assertEquals(75, plus.calculate());
     }
 
+    /**
+     * Scenenario: testing the subtraction operator
+     */
     @Test
     public void substractTest() {
         RNode times = nodeStore.createNode("-",0);
@@ -76,8 +88,11 @@ public class CalculatorFactoryTest {
         assertEquals(4, times.calculate());
     }
 
+    /**
+     * Scenenario: testing the negative subtraction result
+     */
     @Test
-    public void negativeSubstractionTest() {
+    public void negativeSubtractionTest() {
         // 4 - 8
         RNode times = nodeStore.createNode("-",0);
         RNode eight = nodeStore.createNode(null, 8);
@@ -87,6 +102,25 @@ public class CalculatorFactoryTest {
         times.setLeftNode(four);
         times.setRightNode(eight);
         assertEquals(-4, times.calculate());
+    }
+
+    /**
+     * Scenenario: One of the nodes has not being set
+     */
+    @Test
+    public void throwsExceptionWhenNullNodesAreGiven() {
+        RNode times = nodeStore.createNode("*",0);
+        RNode number = nodeStore.createNode(null, 5);
+
+        times.setRightNode(number);
+
+        try {
+            times.calculate();
+            fail("Should throw an exception if one or two of given Nodes are null");
+        } catch (Exception exception){
+            assertNotNull(exception);
+            assertTrue(exception.getMessage().equalsIgnoreCase("Node is not defined."));
+        }
     }
 
 }

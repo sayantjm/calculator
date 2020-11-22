@@ -4,6 +4,10 @@ import questions.nodes.RNode;
 
 /**
  * Created by sayantjm on 22/11/20
+ * This main application starts creating factory and node store
+ * in the run method, the operation 2 + 3 * 4 is performed creating
+ * the required nodes
+ *
  */
 public class NodeFactoryMain {
     public static void main(String[] args) {
